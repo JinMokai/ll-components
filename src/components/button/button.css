@@ -1,0 +1,22 @@
+button {
+  position: relative;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 4px 15px;
+  border: none;
+  height: var(--ll-base-height);
+  font-size: var(--ll-base-font-size);
+  background: var(--bg-button, transparent);
+  color: var(--color-button, inherit);
+  border-radius: var(--ll-base-radius, 4px);
+}
+
+:host([type='primary']) {
+  --bg-button: var(--ll-blue-9);
+  --color-button: var(--ll-gray-0);
+}
+
+:host(:not([disabled])) button:not(:disabled) {
+  cursor: pointer;
+}

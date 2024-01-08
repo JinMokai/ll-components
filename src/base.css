@@ -1,0 +1,83 @@
+:host {
+  /* https://yeun.github.io/open-color/ */
+  /* Gray */
+  --ll-gray-0: #f8f9fa;
+  --ll-gray-1: #f1f3f5;
+  --ll-gray-2: #e9ecef;
+  --ll-gray-3: #dee2e6;
+  --ll-gray-4: #ced4da;
+  --ll-gray-5: #adb5bd;
+  --ll-gray-6: #868e96;
+  --ll-gray-7: #495057;
+  --ll-gray-8: #343a40;
+  --ll-gray-9: #212529;
+
+  /* Red */
+  --ll-red-0: #fff5f5;
+  --ll-red-1: #ffe3e3;
+  --ll-red-2: #ffc9c9;
+  --ll-red-3: #ffa8a8;
+  --ll-red-4: #ff8787;
+  --ll-red-5: #ff6b6b;
+  --ll-red-6: #fa5252;
+  --ll-red-7: #f03e3e;
+  --ll-red-8: #e03131;
+  --ll-red-9: #c92a2a;
+
+  /* Blue */
+  --ll-blue-0: #e7f5ff;
+  --ll-blue-1: #d0ebff;
+  --ll-blue-2: #a5d8ff;
+  --ll-blue-3: #74c0fc;
+  --ll-blue-4: #4dabf7;
+  --ll-blue-5: #339af0;
+  --ll-blue-6: #228be6;
+  --ll-blue-7: #1c7ed6;
+  --ll-blue-8: #1971c2;
+  --ll-blue-9: #1864ab;
+
+  /* Green */
+  --ll-green-0: #ebfbee;
+  --ll-green-1: #d3f9d8;
+  --ll-green-2: #b2f2bb;
+  --ll-green-3: #8ce99a;
+  --ll-green-4: #69db7c;
+  --ll-green-5: #51cf66;
+  --ll-green-6: #40c057;
+  --ll-green-7: #37b24d;
+  --ll-green-8: #2f9e44;
+  --ll-green-9: #2b8a3e;
+
+  /* Yellow */
+  --ll-yellow-0: #fff9db;
+  --ll-yellow-1: #fff3bf;
+  --ll-yellow-2: #ffec99;
+  --ll-yellow-3: #ffe066;
+  --ll-yellow-4: #ffd43b;
+  --ll-yellow-5: #fcc419;
+  --ll-yellow-6: #fab005;
+  --ll-yellow-7: #f59f00;
+  --ll-yellow-8: #f08c00;
+  --ll-yellow-9: #e67700;
+
+  /* Sizes - credits: https://open-props.style/#sizes */
+  --ll-size-1: .25rem;
+  --ll-size-2: .5rem;
+  --ll-size-3: 1rem;
+  --ll-size-4: 1.25rem;
+  --ll-size-5: 1.5rem;
+  --ll-size-6: 1.75rem;
+  --ll-size-7: 2rem;
+  --ll-size-8: 3rem;
+  --ll-size-9: 4rem;
+
+  /* some base styles */
+  --ll-base-height: 32px;
+  --ll-base-font-size: 14px;
+  --ll-base-radius: 4px;
+
+
+  * {
+    box-sizing: border-box;
+  }
+}
