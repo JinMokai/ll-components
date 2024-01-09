@@ -4,19 +4,81 @@ button {
   gap: 4px;
   align-items: center;
   padding: 4px 15px;
-  border: none;
-  height: var(--ll-base-height);
-  font-size: var(--ll-base-font-size);
+  border: 1px solid var(--ll-gray-4);
+  height: var(--ll-base-height, 32px);
+  font-size: var(--ll-base-font-size, 14px);
   background: var(--bg-button, transparent);
   color: var(--color-button, inherit);
   border-radius: var(--ll-base-radius, 4px);
+  transition: var(--ll-transition, 0.2s);
 }
 
-:host([type='primary']) {
-  --bg-button: var(--ll-blue-9);
+:host {
+  display: inline-flex;
+}
+
+:host([type="primary"]) .button {
+  --bg-button: var(--ll-blue-8);
+  --color-button: var(--ll-gray-0);
+  border: 0;
+}
+
+:host([type="dashed"]) .button {
+  border-style: dashed;
+}
+
+:host([type="link"]) .button {
+  border: 0;
+  --color-button: var(--ll-color-href);
+}
+
+:host([size="large"]) .button {
+  font-size: 14px;
+  height: 40px;
+  padding: 6px 15px;
+  border-radius: 8px;
+}
+:host([size="small"]) .button {
+  font-size: 14px;
+  height: 24px;
+  padding: 0px 7px;
+}
+/* danger start */
+:host([danger]) .button {
+  --color-button: var(--ll-red-4);
+  border-color: var(--ll-red-4);
+}
+:host([type="primary"][danger]) .button {
+  --bg-button: var(--ll-red-8);
   --color-button: var(--ll-gray-0);
 }
+:host([danger]:not([type="primary"])) .button:hover {
+  --color-button: var(--ll-red-3);
+  border-color: var(--ll-red-3);
+}
+:host([danger]:not([type="primary"])) .button:not(:disabled):active {
+  background-color: var(--ll-red-0);
+}
+/* danger end */
 
-:host(:not([disabled])) button:not(:disabled) {
+/* normal start */
+:host(:not([type="primary"])) .button:hover {
+  --color-button: var(--ll-blue-3);
+  border-color: var(--ll-blue-3);
+}
+
+:host(:is([type="primary"]):not([disabled])) .button:not(:disabled):hover {
+  filter: brightness(1.2);
+}
+
+:host(:is([type="primary"]):not([disabled])) .button:not(:disabled):active {
+  filter: brightness(0.9);
+}
+
+:host(:not([type="primary"])) .button:not(:disabled):active {
+  background-color: var(--ll-blue-0);
+}
+/* normal end */
+:host(:not([disabled])) .button:not(:disabled) {
   cursor: pointer;
 }

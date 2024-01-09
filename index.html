@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,8 +7,27 @@
     <title>Vite App</title>
   </head>
   <body>
+    <style>
+      /* Hide undefined components */
+      :not(:defined) {
+        display: none;
+      }
+    </style>
     <div id="app">
       <ll-button type="primary">primary</ll-button>
+      <ll-button type="dashed">dashed</ll-button>
+      <ll-button type="link">link</ll-button>
+      <ll-button>default</ll-button>
+      <p></p>
+      <ll-button type="primary" danger>primary</ll-button>
+      <ll-button type="dashed" danger>dashed</ll-button>
+      <ll-button type="link" danger>link</ll-button>
+      <ll-button danger>default</ll-button>
+      <p></p>
+      <ll-button type="primary" danger size="small">primary</ll-button>
+      <ll-button type="dashed" danger size="large">dashed</ll-button>
+      <ll-button type="link" danger>link</ll-button>
+      <ll-button danger>default</ll-button>
     </div>
     <script type="module" src="/main.js"></script>
   </body>

@@ -61,8 +61,8 @@
   --ll-yellow-9: #e67700;
 
   /* Sizes - credits: https://open-props.style/#sizes */
-  --ll-size-1: .25rem;
-  --ll-size-2: .5rem;
+  --ll-size-1: 0.25rem;
+  --ll-size-2: 0.5rem;
   --ll-size-3: 1rem;
   --ll-size-4: 1.25rem;
   --ll-size-5: 1.5rem;
@@ -75,7 +75,9 @@
   --ll-base-height: 32px;
   --ll-base-font-size: 14px;
   --ll-base-radius: 4px;
-
+  --ll-color-danger: var(--ll-red-9);
+  --ll-transition: all 0.2s;
+  --ll-color-href: var(--ll-blue-7);
 
   * {
     box-sizing: border-box;

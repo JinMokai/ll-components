@@ -7,9 +7,13 @@
 		"enabled": true,
 		"rules": {
 			"recommended": true,
-      "complexity": {
-        "noUselessConstructor": "off"
-      }
+			"complexity": {
+				"noUselessConstructor": "off"
+			}
 		}
+	},
+	"formatter": {
+		"indentStyle": "tab",
+		"indentWidth": 2
 	}
 }

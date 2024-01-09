@@ -34,4 +34,12 @@ export default class base extends HTMLElement {
 	getDefaultSlot() {
 		return this.shadowRoot.querySelector("slot:not([name])");
 	}
+
+	/**
+	 * Get host Element
+	 * @returns {HTMLElement}
+	 */
+	getHostElement() {
+		return this.shadowRoot.host;
+	}
 }
