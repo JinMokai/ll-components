@@ -15,5 +15,8 @@
 	"formatter": {
 		"indentStyle": "tab",
 		"indentWidth": 2
+	},
+	"files": {
+		"ignore": ["dist/*.js"]
 	}
 }

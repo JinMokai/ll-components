@@ -1,4 +1,4 @@
-import baseCss from "./base.css?inline";
+import baseCss from "./base.css?inline" assert { type: "css" };
 
 /**
  * This is a basic class configuration

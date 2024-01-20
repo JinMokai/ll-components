@@ -1,0 +1,19 @@
+:not(:defined) {
+  display: none;
+}
+.preview-main {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 15px 0;
+  align-items: center;
+  border-radius: 6px;
+  padding: 4rem;
+  outline: 1px dashed rgba(60, 60, 67, 0.12);
+  box-shadow: 7px 7px #e2e8f0;
+  background-image: url(/grid_dot.svg);
+  background-repeat: repeat;
+  background-size: 1.5rem;
+  resize: both;
+}
