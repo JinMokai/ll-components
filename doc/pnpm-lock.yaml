@@ -13,13 +13,16 @@ dependencies:
     version: 4.0.8(@babel/core@7.23.7)(astro@4.1.2)(vite@5.0.11)(vue@3.4.15)
   astro:
     specifier: ^4.0.1
-    version: 4.1.2
+    version: 4.1.2(typescript@5.3.3)
   sharp:
     specifier: ^0.32.5
     version: 0.32.6
+  typescript:
+    specifier: ^5.3.3
+    version: 5.3.3
   vue:
     specifier: ^3.4.15
-    version: 3.4.15
+    version: 3.4.15(typescript@5.3.3)
 
 packages:
 
@@ -69,7 +72,7 @@ packages:
       '@astrojs/markdown-remark': 4.0.1
       '@mdx-js/mdx': 3.0.0
       acorn: 8.11.3
-      astro: 4.1.2
+      astro: 4.1.2(typescript@5.3.3)
       es-module-lexer: 1.4.1
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -110,7 +113,7 @@ packages:
       '@pagefind/default-ui': 1.0.4
       '@types/hast': 3.0.3
       '@types/mdast': 4.0.3
-      astro: 4.1.2
+      astro: 4.1.2(typescript@5.3.3)
       astro-expressive-code: 0.30.2(astro@4.1.2)
       bcp-47: 2.1.0
       hast-util-select: 6.0.2
@@ -153,8 +156,8 @@ packages:
       '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.0.11)(vue@3.4.15)
       '@vue/babel-plugin-jsx': 1.1.6(@babel/core@7.23.7)
       '@vue/compiler-sfc': 3.4.15
-      astro: 4.1.2
-      vue: 3.4.15
+      astro: 4.1.2(typescript@5.3.3)
+      vue: 3.4.15(typescript@5.3.3)
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
@@ -1060,7 +1063,7 @@ packages:
       '@babel/plugin-transform-typescript': 7.23.6(@babel/core@7.23.7)
       '@vue/babel-plugin-jsx': 1.1.6(@babel/core@7.23.7)
       vite: 5.0.11
-      vue: 3.4.15
+      vue: 3.4.15(typescript@5.3.3)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1073,7 +1076,7 @@ packages:
       vue: ^3.2.25
     dependencies:
       vite: 5.0.11
-      vue: 3.4.15
+      vue: 3.4.15(typescript@5.3.3)
     dev: false
 
   /@vue/babel-helper-vue-transform-on@1.1.6:
@@ -1168,7 +1171,7 @@ packages:
     dependencies:
       '@vue/compiler-ssr': 3.4.15
       '@vue/shared': 3.4.15
-      vue: 3.4.15
+      vue: 3.4.15(typescript@5.3.3)
     dev: false
 
   /@vue/shared@3.4.15:
@@ -1259,11 +1262,11 @@ packages:
     peerDependencies:
       astro: ^3.3.0 || ^4.0.0-beta
     dependencies:
-      astro: 4.1.2
+      astro: 4.1.2(typescript@5.3.3)
       remark-expressive-code: 0.30.2
     dev: false
 
-  /astro@4.1.2:
+  /astro@4.1.2(typescript@5.3.3):
     resolution: {integrity: sha512-C/CrsIjRnRZYsLIBquAoTKj3ZPyGPVRByEcPMs6CrJLiHmcYnjpRMVd7oBFepU6772U1ZcXLy0zdxoRYjHFf5w==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -1323,7 +1326,7 @@ packages:
       shikiji: 0.6.13
       string-width: 7.0.0
       strip-ansi: 7.1.0
-      tsconfck: 3.0.1
+      tsconfck: 3.0.1(typescript@5.3.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
       vite: 5.0.11
@@ -4101,7 +4104,7 @@ packages:
     resolution: {integrity: sha512-AqTiAOLcj85xS7vQ8QkAV41hPDIJ71XJB4RCUrzo/1GM2CQwhkJGaf9Hgr7BOugMRpgGUrqRg/DrBDl4H40+8g==}
     dev: false
 
-  /tsconfck@3.0.1:
+  /tsconfck@3.0.1(typescript@5.3.3):
     resolution: {integrity: sha512-7ppiBlF3UEddCLeI1JRx5m2Ryq+xk4JrZuq4EuYXykipebaq1dV0Fhgr1hb7CkmHt32QSgOZlcqVLEtHBG4/mg==}
     engines: {node: ^18 || >=20}
     hasBin: true
@@ -4110,6 +4113,8 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+    dependencies:
+      typescript: 5.3.3
     dev: false
 
   /tunnel-agent@0.6.0:
@@ -4121,6 +4126,12 @@ packages:
   /type-fest@2.19.0:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
+    dev: false
+
+  /typescript@5.3.3:
+    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
     dev: false
 
   /unherit@3.0.1:
@@ -4357,7 +4368,7 @@ packages:
       vite: 5.0.11
     dev: false
 
-  /vue@3.4.15:
+  /vue@3.4.15(typescript@5.3.3):
     resolution: {integrity: sha512-jC0GH4KkWLWJOEQjOpkqU1bQsBwf4R1rsFtw5GQJbjHVKWDzO6P0nWWBTmjp1xSemAioDFj1jdaK1qa3DnMQoQ==}
     peerDependencies:
       typescript: '*'
@@ -4370,6 +4381,7 @@ packages:
       '@vue/runtime-dom': 3.4.15
       '@vue/server-renderer': 3.4.15(vue@3.4.15)
       '@vue/shared': 3.4.15
+      typescript: 5.3.3
     dev: false
 
   /web-namespaces@2.0.1:

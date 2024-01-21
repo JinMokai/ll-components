@@ -1,7 +1,8 @@
 import { defineComponent, h, onMounted } from "vue";
+import type { Icomponents, Iprops } from "./preview";
 import "./preview.css";
 // import exsit component
-const components = ["button"];
+const components: Icomponents = ["button"];
 
 export default defineComponent({
 	props: {
@@ -10,13 +11,16 @@ export default defineComponent({
 			default: "",
 		},
 	},
-	setup(props, { slots }) {
+	setup(props: Iprops, { slots }) {
+		// @ts-ignore
 		if (!import.meta.env.SSR) {
+			// @ts-ignore
 			if (import.meta.env.MODE === "development") {
 				// biome-ignore lint/complexity/noForEach: <explanation>
 				components.forEach((name) => {
 					import(`../../../src/components/${name}/${name}.js`);
 				});
+				// @ts-ignore
 			} else if (import.meta.env.MODE === "production") {
 				// biome-ignore lint/complexity/noForEach: <explanation>
 				components.forEach((name) => {
