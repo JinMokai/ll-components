@@ -1,5 +1,5 @@
 {
-	"name": "",
+	"name": "ll-webcomponents-doc",
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
@@ -20,7 +20,7 @@
 		"vue": "^3.4.15"
 	},
 	"engines": {
-		"node": "21.1.0",
-		"npm": "8.10.0"
+		"node": ">=21.1.0",
+		"npm": ">=8.10.0"
 	}
 }

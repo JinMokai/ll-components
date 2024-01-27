@@ -17,3 +17,11 @@
   background-size: 1.5rem;
   resize: both;
 }
+.preview-main > * {
+  margin: 0 !important;
+}
+/* Here is the custom css */
+.custom-class::part(button) {
+  background-color: #f00;
+  color: #fff;
+}

@@ -82,3 +82,8 @@ button {
 :host(:not([disabled])) .button:not(:disabled) {
   cursor: pointer;
 }
+:host([disabled]) {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}

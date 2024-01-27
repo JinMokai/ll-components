@@ -7,5 +7,87 @@ import Preview from '../../../components/preview.tsx'
 ## 按钮类型
 
 <Preview client:load 
-  component={`<ll-button danger>按钮</ll-button>`}
+  component={`
+  <ll-button>default</ll-button>
+  <ll-button type='primary'>primary</ll-button>
+  <ll-button type='dashed'>dashed</ll-button>
+  <ll-button type='link'>link</ll-button>
+  `}
+/>
+
+```css
+  <ll-button>default</ll-button>
+  <ll-button type='primary'>primary</ll-button>
+  <ll-button type='dashed'>dashed</ll-button>
+  <ll-button type='link'>link</ll-button>
+```
+
+## 按钮大小
+
+<Preview client:load 
+  component={`
+  <ll-button size='small'>small</ll-button>
+  <ll-button>default</ll-button>
+  <ll-button size='large'>large</ll-button>
+  `}
+/>
+
+```css
+  <ll-button size='small'>small</ll-button>
+  <ll-button>default</ll-button>
+  <ll-button size='large'>large</ll-button>
+```
+
+## 危险按钮样式
+
+<Preview client:load 
+  component={`
+  <ll-button danger>default</ll-button>
+  <ll-button type='primary' danger>primary</ll-button>
+  <ll-button type='dashed' danger>dashed</ll-button>
+  <ll-button type='link' danger>link</ll-button>
+  `}
+/>
+
+```css
+  <ll-button danger>default</ll-button>
+  <ll-button type='primary' danger>primary</ll-button>
+  <ll-button type='dashed' danger>dashed</ll-button>
+  <ll-button type='link' danger>link</ll-button>
+```
+
+## 禁用按钮
+
+<Preview client:load 
+  component={`
+  <ll-button disabled>default</ll-button>
+  <ll-button type='primary' disabled>primary</ll-button>
+  <ll-button type='dashed' disabled>dashed</ll-button>
+  <ll-button type='link' disabled>link</ll-button>
+  `}
+/>
+
+```css
+  <ll-button disabled>default</ll-button>
+  <ll-button type='primary' disabled>primary</ll-button>
+  <ll-button type='dashed' disabled>dashed</ll-button>
+  <ll-button type='link' disabled>link</ll-button>
+```
+
+## 怎么修改按钮的样式
+
+我们可以使用::part()语法，通过这个伪类可以穿透shadow dom盒子。
+::part()伪类可以匹配的按钮有```button```,```prefix```,```label```,```suffix```,分别是按钮自生，按钮前缀，按钮文字，按钮后缀。
+
+```css
+.custom-class::part(button) {
+  background-color: #f00;
+  color: #fff;
+}
+```
+
+<Preview client:load 
+  component={`
+  <ll-button class='custom-class'>default</ll-button>
+  `}
 />
