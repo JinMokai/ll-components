@@ -67,7 +67,16 @@ export default class llButton extends Base {
 		} else {
 			this.getButtonElement.removeAttribute("disabled");
 			this.getButtonElement.setAttribute("aria-disabled", "false");
+			this.getButtonElement.setAttribute("aria-label", this.buttonText);
 		}
+	}
+
+	/**
+	 * @description 获取按钮文本内容
+	 * @returns {String}s
+	 */
+	get buttonText() {
+		return this.textContent.replace(/(^\s+|\s+$)/gm, "").replace(/\s+/g, " ");
 	}
 }
 

@@ -14,8 +14,12 @@
       }
     </style>
     <div id="app">
-      <ll-button disabled>default</ll-button>
-      <ll-button danger>default</ll-button>
+      <!-- <ll-button disabled>default</ll-button> -->
+      <ll-button danger>
+        <span slot="prefix">😀</span>
+        default
+        <span slot="suffix">suffix</span>
+      </ll-button>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
