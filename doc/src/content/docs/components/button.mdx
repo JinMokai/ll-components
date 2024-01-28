@@ -15,7 +15,8 @@ import Preview from '../../../components/preview.tsx'
   `}
 />
 
-```css
+```html
+<!-- index.html -->
   <ll-button>default</ll-button>
   <ll-button type='primary'>primary</ll-button>
   <ll-button type='dashed'>dashed</ll-button>
@@ -32,7 +33,8 @@ import Preview from '../../../components/preview.tsx'
   `}
 />
 
-```css
+```html
+<!-- index.html -->
   <ll-button size='small'>small</ll-button>
   <ll-button>default</ll-button>
   <ll-button size='large'>large</ll-button>
@@ -49,7 +51,8 @@ import Preview from '../../../components/preview.tsx'
   `}
 />
 
-```css
+```html
+<!-- index.html -->
   <ll-button danger>default</ll-button>
   <ll-button type='primary' danger>primary</ll-button>
   <ll-button type='dashed' danger>dashed</ll-button>
@@ -67,19 +70,64 @@ import Preview from '../../../components/preview.tsx'
   `}
 />
 
-```css
+```html
+<!-- index.html -->
   <ll-button disabled>default</ll-button>
   <ll-button type='primary' disabled>primary</ll-button>
   <ll-button type='dashed' disabled>dashed</ll-button>
   <ll-button type='link' disabled>link</ll-button>
 ```
 
+## 插槽
+
+:::note[笔记📖]
+
+通过使用```slot='prefix'```，你可以将元素插入到按钮的前面。
+默认的书写文本是默认插槽。
+通过使用```slot='suffix'```，你可以将元素插入到按钮的后面。
+
+```html
+<!-- index.html -->
+  <ll-button>
+    <span slot='prefix'>😀</span>
+    default
+  </ll-button>
+  <ll-button>
+    😀
+  </ll-button>
+  <ll-button>
+    <span slot='suffix'>😀</span>
+    default
+  </ll-button>
+```
+:::
+
+<Preview client:load 
+  component={`
+  <ll-button>
+    <span slot='prefix'>😀</span>
+    default
+  </ll-button>
+  <ll-button>
+    😀
+  </ll-button>
+  <ll-button>
+    <span slot='suffix'>😀</span>
+    default
+  </ll-button>
+  `}
+/>
+
+
 ## 怎么修改按钮的样式
 
-我们可以使用::part()语法，通过这个伪类可以穿透shadow dom盒子。
-::part()伪类可以匹配的按钮有```button```,```prefix```,```label```,```suffix```,分别是按钮自生，按钮前缀，按钮文字，按钮后缀。
+:::note[笔记📖]
+我们可以使用[::part()](https://developer.mozilla.org/en-US/docs/Web/CSS/::part)语法，通过这个伪类可以穿透shadow dom盒子。
+::part()伪类可以匹配的按钮有```button```,```prefix```,```label```,```suffix```,分别是按钮自身，按钮前缀，按钮文字，按钮后缀。
+:::
 
 ```css
+/* index.css */
 .custom-class::part(button) {
   background-color: #f00;
   color: #fff;

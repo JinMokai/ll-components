@@ -30,8 +30,12 @@ export default defineComponent({
 		}
 		onMounted(() => {});
 		return () => {
+			// The not-content class is used because it kills the default markdown style.
 			return props.component
-				? h("div", { innerHTML: props.component, class: ["preview-main"] })
+				? h("div", {
+						innerHTML: props.component,
+						class: ["preview-main", "not-content"],
+				  })
 				: "no empty";
 		};
 	},
