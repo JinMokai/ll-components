@@ -72,7 +72,7 @@ export default class llButton extends Base {
 	}
 
 	/**
-	 * @description 获取按钮文本内容
+	 * @description Get button text content
 	 * @returns {String}s
 	 */
 	get buttonText() {
