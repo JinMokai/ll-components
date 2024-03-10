@@ -1,5 +1,6 @@
 import Base from "../../base";
 import icons from "../../icons/index";
+import { isType } from "../../utils/index";
 import css from "./icon.css?inline" assert { type: "css" };
 
 export default class llIcon extends Base {
@@ -7,7 +8,7 @@ export default class llIcon extends Base {
 	#icon;
 
 	static get observedAttributes() {
-		return ["name", "size", "color"];
+		return ["name", "size", "color", "url"];
 	}
 
 	constructor() {
@@ -25,7 +26,16 @@ export default class llIcon extends Base {
 
 	attributeChangedCallback(name, oldValue, newValue) {
 		if (name === "name") {
-			this.#icon.innerHTML = icons[this.getAttribute("name") || "error"];
+			const name = this.getAttribute("name");
+			const url = this.getAttribute("url");
+			// If the icon is not the default name and has a url attribute, it will display user-defined data
+			if (!icons[name] && url) {
+				this.#icon.innerHTML = JSON.parse(url)?.[name] ?? "";
+			} else {
+				this.#icon.innerHTML = icons[name || "error"];
+			}
+			this.setAttribute("aria-label", name);
+			this.setAttribute("title", name);
 		}
 		if (name === "size") {
 			this.#icon.style.fontSize = `${this.getAttribute("size")}px`;
