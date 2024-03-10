@@ -2,11 +2,15 @@ import { defineComponent, h, onMounted } from "vue";
 import type { Icomponents, Iprops } from "./preview";
 import "./preview.css";
 // import exsit component
-const components: Icomponents = ["button"];
+const components: Icomponents = ["button", "icon"];
 
 export default defineComponent({
 	props: {
 		component: {
+			type: String,
+			default: "",
+		},
+		jscode: {
 			type: String,
 			default: "",
 		},
@@ -28,7 +32,13 @@ export default defineComponent({
 				});
 			}
 		}
-		onMounted(() => {});
+		onMounted(() => {
+			if (props.jscode) {
+				const script = document.createElement("script");
+				script.innerHTML = props.jscode;
+				document.body.appendChild(script);
+			}
+		});
 		return () => {
 			// The not-content class is used because it kills the default markdown style.
 			return props.component
